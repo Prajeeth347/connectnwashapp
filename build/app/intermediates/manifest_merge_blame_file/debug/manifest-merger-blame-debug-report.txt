@@ -1,0 +1,123 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.connectnwash.connectnwash"
+4    android:versionCode="2"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="33" />
+10    <!--
+11         The INTERNET permission is required for development. Specifically,
+12         the Flutter tool needs it to communicate with the running application
+13         to allow setting breakpoints, to provide hot reload, etc.
+14    -->
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->/Users/prajeeths/AppDev/CNW/connectnwash/android/app/src/main/AndroidManifest.xml:2:2-63
+15-->/Users/prajeeths/AppDev/CNW/connectnwash/android/app/src/main/AndroidManifest.xml:2:19-61
+16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+16-->/Users/prajeeths/AppDev/CNW/connectnwash/android/app/src/main/AndroidManifest.xml:3:2-75
+16-->/Users/prajeeths/AppDev/CNW/connectnwash/android/app/src/main/AndroidManifest.xml:3:19-73
+17
+18    <permission
+18-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+19        android:name="com.connectnwash.connectnwash.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="com.connectnwash.connectnwash.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+23
+24    <application
+25        android:name="android.app.Application"
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.10.1] /Users/prajeeths/.gradle/caches/transforms-3/c4988ff80110f75080a936fc6f044848/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+29        android:label="connectnwash" >
+30        <activity
+31            android:name="com.connectnwash.connectnwash.MainActivity"
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+33            android:exported="true"
+34            android:hardwareAccelerated="true"
+35            android:launchMode="singleTop"
+36            android:theme="@style/LaunchTheme"
+37            android:windowSoftInputMode="adjustResize" >
+38
+39            <!--
+40                 Specifies an Android theme to apply to this Activity as soon as
+41                 the Android process has started. This theme is visible to the user
+42                 while the Flutter UI initializes. After that, this theme continues
+43                 to determine the Window background behind the Flutter UI.
+44            -->
+45            <meta-data
+46                android:name="io.flutter.embedding.android.NormalTheme"
+47                android:resource="@style/NormalTheme" />
+48
+49            <intent-filter>
+50                <action android:name="android.intent.action.MAIN" />
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+53            </intent-filter>
+54        </activity>
+55        <!--
+56             Don't delete the meta-data below.
+57             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+58        -->
+59        <meta-data
+60            android:name="flutterEmbedding"
+61            android:value="2" />
+62
+63        <service
+63-->[:geolocator_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:56
+64            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+64-->[:geolocator_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-77
+65            android:enabled="true"
+65-->[:geolocator_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-35
+66            android:exported="false"
+66-->[:geolocator_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+67            android:foregroundServiceType="location" />
+67-->[:geolocator_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/geolocator_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-53
+68
+69        <activity
+69-->[:url_launcher_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+70            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+70-->[:url_launcher_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+71            android:exported="false"
+71-->[:url_launcher_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+72            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+72-->[:url_launcher_android] /Users/prajeeths/AppDev/CNW/connectnwash/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+73
+74        <uses-library
+74-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+75            android:name="androidx.window.extensions"
+75-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+76            android:required="false" />
+76-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+77        <uses-library
+77-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+78            android:name="androidx.window.sidecar"
+78-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+79            android:required="false" />
+79-->[androidx.window:window:1.0.0-beta04] /Users/prajeeths/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+80
+81        <activity
+81-->[com.google.android.gms:play-services-base:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+82-->[com.google.android.gms:play-services-base:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+83            android:exported="false"
+83-->[com.google.android.gms:play-services-base:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+84-->[com.google.android.gms:play-services-base:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/781e5567158e59d38ee2b89930f9808b/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+85
+86        <meta-data
+86-->[com.google.android.gms:play-services-basement:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+87            android:name="com.google.android.gms.version"
+87-->[com.google.android.gms:play-services-basement:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+88            android:value="@integer/google_play_services_version" />
+88-->[com.google.android.gms:play-services-basement:18.1.0] /Users/prajeeths/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+89    </application>
+90
+91</manifest>
