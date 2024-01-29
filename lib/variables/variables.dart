@@ -1,3 +1,3 @@
 class Variables {
-  String baseuri = "http://16.171.139.19:3000/";
+  String baseuri = "http://13.239.2.140:3000/";
 }
