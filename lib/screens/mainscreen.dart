@@ -10,6 +10,7 @@ import 'package:connectnwash/screens/profilescreen.dart';
 import 'package:connectnwash/services/clotheshelper.dart';
 import 'package:connectnwash/variables/variables.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -28,6 +29,7 @@ class _MainscreenState extends State<Mainscreen> {
   int? custnumb;
   List<AddressModel>? adddet;
   List<Clothesmodel>? clothes;
+  List<Clothesmodel> cartItems = [];
   bool clothesloaded = false;
   int? addindex;
   bool addloaded = false;
@@ -65,6 +67,33 @@ class _MainscreenState extends State<Mainscreen> {
     if (clothes != null) {
       setState(() {
         clothesloaded = true;
+      });
+    }
+  }
+
+  addItemToCart(Clothesmodel clothModel) {
+    if (cartItems.isNotEmpty) {
+      //Below condition will check if the new item exist in the cartItems or not
+      //If not then will add new item to the cartItems
+      int itemIndex =
+          cartItems.indexWhere((element) => element.name == clothModel.name);
+
+      if (itemIndex < 0) {
+        setState(() {
+          cartItems.add(clothModel);
+        });
+      }
+    } else {
+      setState(() {
+        cartItems.add(clothModel);
+      });
+    }
+  }
+
+  removeItemFromCart(Clothesmodel clothModel) {
+    if (cartItems.isNotEmpty && clothModel.quantity == null) {
+      setState(() {
+        cartItems.removeWhere((element) => element.name == clothModel.name);
       });
     }
   }
@@ -237,6 +266,7 @@ class _MainscreenState extends State<Mainscreen> {
                                                   quantity = quantity + 1;
                                                   clothes![index].quantity = 1;
                                                 });
+                                                addItemToCart(clothes![index]);
                                               },
                                               child: Text(
                                                 'Add',
@@ -263,6 +293,8 @@ class _MainscreenState extends State<Mainscreen> {
                                                                 1;
                                                       }
                                                     });
+                                                    removeItemFromCart(
+                                                        clothes![index]);
                                                   },
                                                   icon: FaIcon(
                                                     FontAwesomeIcons.minus,
@@ -293,6 +325,8 @@ class _MainscreenState extends State<Mainscreen> {
                                                                   .quantity! +
                                                               1;
                                                     });
+                                                    addItemToCart(
+                                                        clothes![index]);
                                                   },
                                                   icon: FaIcon(
                                                     FontAwesomeIcons.plus,
@@ -367,7 +401,27 @@ class _MainscreenState extends State<Mainscreen> {
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: '212A3E'.toColor()),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    print(
+                                        'LENGTH OF THE CART ITEMS ${cartItems.length}');
+                                    bool response = await ClothesService()
+                                        .placeOrder(cartItems);
+                                    if (response) {
+                                      setState(() {
+                                        cartItems.clear();
+                                        clothes!.forEach((element) {
+                                          element.quantity = null;
+                                        });
+                                        quantity = 0;
+                                      });
+                                      Fluttertoast.showToast(
+                                        backgroundColor: Colors.green,
+                                        msg: "Your order has been placed !",
+                                        toastLength: Toast.LENGTH_SHORT,
+                                        gravity: ToastGravity.CENTER,
+                                      );
+                                    }
+                                  },
                                   child: Padding(
                                     padding: EdgeInsets.all(
                                         MediaQuery.of(context).size.width *
