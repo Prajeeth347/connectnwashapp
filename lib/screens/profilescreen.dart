@@ -415,37 +415,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                                                   .height *
                                                               0.01,
                                                         ),
-                                                        Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceAround,
-                                                          children: [
-                                                            Text(
-                                                              statusses[
-                                                                  orders![index]
-                                                                      .status],
-                                                              style: GoogleFonts.roboto(
-                                                                  color: 'F1EFEF'
-                                                                      .toColor(),
-                                                                  fontSize: MediaQuery.of(
-                                                                              context)
-                                                                          .size
-                                                                          .width *
-                                                                      0.04),
-                                                            ),
-                                                            Text(
-                                                              '₹${orders![index].totalcost}',
-                                                              style: GoogleFonts.roboto(
-                                                                  color: 'F1EFEF'
-                                                                      .toColor(),
-                                                                  fontSize: MediaQuery.of(
-                                                                              context)
-                                                                          .size
-                                                                          .width *
-                                                                      0.04),
-                                                            ),
-                                                          ],
-                                                        )
+                                                        // Row(
+                                                        //   mainAxisAlignment:
+                                                        //       MainAxisAlignment
+                                                        //           .spaceAround,
+                                                        //   children: [
+                                                        //     Text(
+                                                        //       statusses[
+                                                        //           orders![index]
+                                                        //               .status],
+                                                        //       style: GoogleFonts.roboto(
+                                                        //           color: 'F1EFEF'
+                                                        //               .toColor(),
+                                                        //           fontSize: MediaQuery.of(
+                                                        //                       context)
+                                                        //                   .size
+                                                        //                   .width *
+                                                        //               0.04),
+                                                        //     ),
+                                                        //     Text(
+                                                        //       '₹${orders![index].totalcost}',
+                                                        //       style: GoogleFonts.roboto(
+                                                        //           color: 'F1EFEF'
+                                                        //               .toColor(),
+                                                        //           fontSize: MediaQuery.of(
+                                                        //                       context)
+                                                        //                   .size
+                                                        //                   .width *
+                                                        //               0.04),
+                                                        //     ),
+                                                        //   ],
+                                                        // )
                                                       ],
                                                     ),
                                                   )),

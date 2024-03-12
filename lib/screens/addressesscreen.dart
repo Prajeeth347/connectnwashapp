@@ -7,6 +7,7 @@ import 'package:connectnwash/models/addressmodel.dart';
 import 'package:connectnwash/screens/mainscreen.dart';
 import 'package:connectnwash/variables/variables.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
@@ -128,8 +129,18 @@ class _AddressScreenState extends State<AddressScreen> {
                                           ),
                                           ElevatedButton(
                                               style: ElevatedButton.styleFrom(
-                                                  backgroundColor: Colors.red),
-                                              onPressed: () {},
+                                                backgroundColor: Colors.red,
+                                              ),
+                                              onPressed: () {
+                                                Fluttertoast.showToast(
+                                                  backgroundColor: Colors.red,
+                                                  msg:
+                                                      "Account delete request has been send",
+                                                  toastLength:
+                                                      Toast.LENGTH_SHORT,
+                                                  gravity: ToastGravity.CENTER,
+                                                );
+                                              },
                                               child: Text(
                                                 'Delete',
                                                 style: GoogleFonts.roboto(),
